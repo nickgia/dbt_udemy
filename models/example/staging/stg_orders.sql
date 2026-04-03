@@ -1,4 +1,3 @@
-
 {{
     config(
         materialized='table'
@@ -23,7 +22,7 @@ p.productid,
 p.category,
 p.productname,
 p.subcategory
-from {{ ref('raw_order') }} as o
+from {{ ref('raw_orders') }} as o
 left join {{ ref('raw_customer') }} as c
 on o.customerid = c.customerid
 left join {{ ref('raw_product') }} as p
