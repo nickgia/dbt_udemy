@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: globalmart
+    description: a clone of the Snoflake Database
+    database : raw
+    schema: globalmart
+    tables:
+     - name : customer
+       description: raw customer table 
+     - name : products
+     - name : orders
+       description: primary key for orders
+       
